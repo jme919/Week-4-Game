@@ -18,6 +18,33 @@ $(function() {
 
 		var $yellowNum = $('#yellow').val(Math.floor(Math.random() * 12) + 1);
 
+		$("#blue").click(function(){
+			$("#score").html(parseInt($("#score").html())+parseInt($(this).val()));
+
+		});
+
+		$("#green").click(function(){
+			
+			$("#score").html(parseInt($("#score").html())+parseInt($(this).val()));
+
+		});
+
+		$("#red").click(function(){
+			$("#score").html(parseInt($("#score").html())+parseInt($(this).val()));
+
+		});
+
+		$("#yellow").click(function(){
+			$("#score").html(parseInt($("#score").html())+parseInt($(this).val()));
+
+		});
+
+		//*add function//
+
+
+
+
+    
     
 
     

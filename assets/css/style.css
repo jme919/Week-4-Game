@@ -15,9 +15,11 @@ header{
 	height: 50px;
 	margin: 20px auto 20px auto;
 	padding: 10px;
+	border-radius: 25px;
 }
 
 #main{
+	border-radius: 25px;
 	line-height: 28px;
 	font-size: 18px;
 	text-align: center;
@@ -31,7 +33,7 @@ header{
 }
 
 #randomNumDiv{
-
+	border-radius: 25px;
 	font-size: 18px;
 	text-align: center;
 	background-color: #ffa500;
@@ -52,6 +54,7 @@ header{
 	height:50px;
 	margin:auto;
 	padding: 10px;
+	border-radius: 25px;
 
 
 }
@@ -63,6 +66,7 @@ header{
 	margin:auto;	
 	margin-top: 20px;
 	padding: 10px;
+	border-radius: 25px;
 }	
 
 #one{
@@ -72,10 +76,11 @@ header{
 	text-align: center;
 	background-color: #ffa500;
 	width: 400px;
-	height: px;
+	height: 22px;
 	margin:auto;
 	margin-top: 20px;
 	padding: 10px;
+	border-radius: 25px;
 
 	
 }
@@ -90,6 +95,7 @@ header{
 	margin:auto;
 	margin-top: 20px;
 	padding: 10px;
+	border-radius: 25px;
 
 
 }
@@ -106,10 +112,12 @@ img{
 
 button{
 	margin-left: 35px;
+	border-radius: 12px;
 }
 
 button:hover{
 	background-color: #ccf5ff;
+	
 }
 	
 
