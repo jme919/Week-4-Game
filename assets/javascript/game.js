@@ -1,18 +1,20 @@
+		var $randomNum;
+        
+     	var wins = 0 ;
+     	var losses = 0;
+     	var gemValue;
+     	var valueSum = 0;
+     	var valueNum;
 
 $(function() {
     console.log( "its alive" );
 
-     	var score = $("#score").val();
-     	var wins = 0;
-     	var losses = 0;
+     	
     	
 //*create a random number for user to match*//
-    	var $randomNum = 19 + Math.floor(Math.random() * (120-19));
+    	 function reset(){$randomNum = 19 + Math.floor(Math.random() * (120-19));
     	$("#randomNum").text($randomNum);
-
-
-
-//*random hidden crystal values*//
+    	/*random hidden crystal values*/
 
 		var $blueNum = $('#blue').val(Math.floor(Math.random() * 12) + 1);
 
@@ -22,8 +24,58 @@ $(function() {
 
 		var $yellowNum = $('#yellow').val(Math.floor(Math.random() * 12) + 1);
 
+    }
+
+         reset();
+
+
+
+
 //*button clicks placing values in the score div*//
-		$("#blue").click(function(){
+		 
+		  $(".gem").on("click",function(){
+		  	gemValue = $(this).val();
+		  	valueNum = parseInt(gemValue);
+		  	console.log(gemValue);
+		  	valueSum += valueNum;
+
+
+//tracking wins and loses//
+		  	$("#score").html(valueSum);
+
+		  	if(valueSum === $randomNum){
+			wins++;
+			$("#wins").html(wins);
+			alert("You win, keep playing!!!");
+			reset();
+			valueSum = 0;
+			$("#score").html(valueSum);
+
+
+		} else if  (valueSum > $randomNum){
+			console.log(valueSum);
+			losses++;
+			$("#losses").html(losses);
+			alert("Sorry you lost, Try Again!");
+			reset();
+			valueSum = 0;
+			$("#score").html(valueSum);
+
+
+		};
+
+
+		 });
+		  console.log("sum: " + valueSum);
+
+
+
+		
+
+
+
+
+		 /*$("#blue").click(function(){
 			$("#score").html(parseInt($("#score").html())+parseInt($(this).val()));
 
 		});
@@ -44,17 +96,8 @@ $(function() {
 
 		});
 
+//*track wins and loses*/		
 
-		if(score === $randomNum){
-			wins++;
-			$("#wins").html(wins);
-
-
-		} else if(score > $randomNum){
-			losses++;
-			$("#losses").text(losses);
-
-		}
 
 		
 
