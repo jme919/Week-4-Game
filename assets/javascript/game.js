@@ -1,8 +1,10 @@
 
 $(function() {
     console.log( "its alive" );
+
+     	var score = 0;
+    	
 //*create a random number for user to match*//
-     
     	var $randomNum = 19 + Math.floor(Math.random() * (120-19));
     	$("#randomNum").text($randomNum);
 
@@ -39,7 +41,7 @@ $(function() {
 
 		});
 
-		//*add function//
+		
 
 
 
