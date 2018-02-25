@@ -2,7 +2,7 @@
 $(function() {
     console.log( "its alive" );
 
-     	var score = 0;
+     	var score = $("#score").val();
      	var wins = 0;
      	var losses = 0;
     	
@@ -52,7 +52,7 @@ $(function() {
 
 		} else if(score > $randomNum){
 			losses++;
-			$("#losses").html(losses);
+			$("#losses").text(losses);
 
 		}
 
